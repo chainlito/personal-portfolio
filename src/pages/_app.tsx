@@ -1,6 +1,7 @@
 import '../styles/global.css';
 
 import { ContextProvider } from '../components/AppContext';
+import { Layout } from '@/components/Layout';
 
 interface AppProps {
 	Component: React.FunctionComponent<any>;
@@ -10,7 +11,9 @@ interface AppProps {
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => (
   <ContextProvider>
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   </ContextProvider>
 );
 
