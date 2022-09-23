@@ -1,9 +1,17 @@
 import '../styles/global.css';
 
-import type { AppProps } from 'next/app';
+import { ContextProvider } from '../components/AppContext';
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Component {...pageProps} />
+interface AppProps {
+	Component: React.FunctionComponent<any>;
+	pageProps: any;
+	router: any;
+}
+
+const MyApp = ({ Component, pageProps, router }: AppProps) => (
+  <ContextProvider>
+    <Component {...pageProps} />
+  </ContextProvider>
 );
 
 export default MyApp;
