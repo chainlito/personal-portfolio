@@ -1,186 +1,62 @@
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
+import Typist from 'react-typist-component';
+import Image from 'next/image';
+import ImageSelf from '../../public/images/self.png';
 
-import { Meta } from '@/layouts/Meta';
-import { Main } from '@/templates/Main';
+export default function IndexPage() {
+	const [count, setCount] = useState(1);
 
-const Index = () => {
-  const router = useRouter();
+	useEffect(() => {
+		setCount(1);
+	}, [count]);
 
-  return (
-    <Main
-      meta={
-        <Meta
-          title="Next.js Boilerplate Presentation"
-          description="Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework."
-        />
-      }
-    >
-      <a href="https://github.com/ixartz/Next-js-Boilerplate">
-        <img
-          src={`${router.basePath}/assets/images/nextjs-starter-banner.png`}
-          alt="Nextjs starter banner"
-        />
-      </a>
-      <h1 className="text-2xl font-bold">
-        Boilerplate code for your Nextjs project with Tailwind CSS
-      </h1>
-      <p>
-        <span role="img" aria-label="rocket">
-          🚀
-        </span>{' '}
-        Next.js Boilerplate is a starter code for your Next js project by
-        putting developer experience first .{' '}
-        <span role="img" aria-label="zap">
-          ⚡️
-        </span>{' '}
-        Made with Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged,
-        VSCode, Netlify, PostCSS, Tailwind CSS.
-      </p>
-      <h2 className="text-lg font-semibold">Next js Boilerplate Features</h2>
-      <p>Developer experience first:</p>
-      <ul>
-        <li>
-          <span role="img" aria-label="fire">
-            🔥
-          </span>{' '}
-          <a href="https://nextjs.org" rel="nofollow">
-            Next.js
-          </a>{' '}
-          for Static Site Generator
-        </li>
-        <li>
-          <span role="img" aria-label="art">
-            🎨
-          </span>{' '}
-          Integrate with{' '}
-          <a href="https://tailwindcss.com" rel="nofollow">
-            Tailwind CSS
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="nail_care">
-            💅
-          </span>{' '}
-          PostCSS for processing Tailwind CSS
-        </li>
-        <li>
-          <span role="img" aria-label="tada">
-            🎉
-          </span>{' '}
-          Type checking Typescript
-        </li>
-        <li>
-          <span role="img" aria-label="pencil2">
-            ✏️
-          </span>{' '}
-          Linter with{' '}
-          <a href="https://eslint.org" rel="nofollow">
-            ESLint
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="hammer_and_wrench">
-            🛠
-          </span>{' '}
-          Code Formatter with{' '}
-          <a href="https://prettier.io" rel="nofollow">
-            Prettier
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="fox_face">
-            🦊
-          </span>{' '}
-          Husky for Git Hooks
-        </li>
-        <li>
-          <span role="img" aria-label="no_entry_sign">
-            🚫
-          </span>{' '}
-          Lint-staged for running linters on Git staged files
-        </li>
-        <li>
-          <span role="img" aria-label="no_entry_sign">
-            🗂
-          </span>{' '}
-          VSCode configuration: Debug, Settings, Tasks and extension for
-          PostCSS, ESLint, Prettier, TypeScript
-        </li>
-        <li>
-          <span role="img" aria-label="robot">
-            🤖
-          </span>{' '}
-          SEO metadata, JSON-LD and Open Graph tags with Next SEO
-        </li>
-        <li>
-          <span role="img" aria-label="robot">
-            ⚙️
-          </span>{' '}
-          <a
-            href="https://www.npmjs.com/package/@next/bundle-analyzer"
-            rel="nofollow"
-          >
-            Bundler Analyzer
-          </a>
-        </li>
-        <li>
-          <span role="img" aria-label="rainbow">
-            🌈
-          </span>{' '}
-          Include a FREE minimalist theme
-        </li>
-        <li>
-          <span role="img" aria-label="hundred">
-            💯
-          </span>{' '}
-          Maximize lighthouse score
-        </li>
-      </ul>
-      <p>Built-in feature from Next.js:</p>
-      <ul>
-        <li>
-          <span role="img" aria-label="coffee">
-            ☕
-          </span>{' '}
-          Minify HTML &amp; CSS
-        </li>
-        <li>
-          <span role="img" aria-label="dash">
-            💨
-          </span>{' '}
-          Live reload
-        </li>
-        <li>
-          <span role="img" aria-label="white_check_mark">
-            ✅
-          </span>{' '}
-          Cache busting
-        </li>
-      </ul>
-      <h2 className="text-lg font-semibold">Our Stater code Philosophy</h2>
-      <ul>
-        <li>Minimal code</li>
-        <li>SEO-friendly</li>
-        <li>
-          <span role="img" aria-label="rocket">
-            🚀
-          </span>{' '}
-          Production-ready
-        </li>
-      </ul>
-      <p>
-        Check our GitHub project for more information about{' '}
-        <a href="https://github.com/ixartz/Next-js-Boilerplate">
-          Nextjs Boilerplate
-        </a>
-        . You can also browse our{' '}
-        <a href="https://creativedesignsguru.com/category/nextjs/">
-          Premium NextJS Templates
-        </a>{' '}
-        on our website to support this project.
-      </p>
-    </Main>
-  );
-};
-
-export default Index;
+	return (
+		<div className="flex flex-col space-y-32">
+			<section id="introduction" className="mx-auto flex max-w-full flex-col space-y-8 pt-6 sm:pt-32">
+				<div className="flex flex-col space-y-8">
+					<div className="flex flex-col ">
+						<h3 className="font-mono text-2xl text-blue-400">I Am Brandon Lee</h3>
+						<div className="flex space-x-8">
+							<h4
+								className={`flex-none text-3xl font-bold h-fit w-fit font-inter sm:text-4xl md:text-5xl`}
+							>    
+								{count ? (
+									<Typist
+										cursor={<span>|</span>}
+										typingDelay={70}
+										onTypingDone={() => setCount(0)}
+									>
+										<span>A Software Engineer</span>
+										<Typist.Backspace count={17} />
+                    <Typist.Delay ms={1500} />
+										<span> Full-Stack Developer</span>
+										<Typist.Backspace count={20} />
+                    <Typist.Delay ms={1500} />
+										<span> Long-Life Learner</span>
+										<Typist.Backspace count={20} />
+                    <Typist.Delay ms={1500} />
+									</Typist>
+								) : (
+									' '
+								)}
+							</h4>
+						</div>
+					</div>
+					<p className={`max-w-4xl text-lg`}>
+						I&apos;m a prolific, creative software developer with 8+ years of experience helping small to
+						medium sized companies from different industries. Passionate about building world class web and
+						desktop applications. Enthusiastic engineer eager to contribute to team success through one's
+						hard work, attention to detail and excellent organizational skills.{' '}
+					</p>
+				</div>
+			</section>
+      <section id="photo">
+        <Image
+          className="absolute z-10 block h-full rounded object-cover object-center grayscale group-hover:blur-none group-hover:contrast-100 group-hover:grayscale-0"
+          src={ImageSelf}
+          placeholder="blur"
+        /> 
+      </section>
+		</div>
+	);
+}

@@ -92,7 +92,7 @@ export function Background() {
               enable: true,
               area: 600,
             },
-            value: 30,
+            value: 50,
           },
           opacity: {
             value: 0.5,
