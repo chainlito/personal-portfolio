@@ -15,7 +15,7 @@ export default function IndexPage() {
 			<section id="introduction" className="mx-auto flex max-w-full flex-col space-y-8 pt-6 sm:pt-32">
 				<div className="flex flex-col space-y-8">
 					<div className="flex flex-col ">
-						<h3 className="font-mono text-2xl text-blue-400">I Am Brandon Lee</h3>
+						<h3 className="font-sans text-2xl text-blue-400">I'M BRANDON LEE</h3>
 						<div className="flex space-x-8">
 							<h4
 								className={`flex-none text-3xl font-bold h-fit w-fit font-inter sm:text-4xl md:text-5xl`}
