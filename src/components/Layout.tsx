@@ -11,7 +11,7 @@ export function Layout({ children }: any) {
         </div>
         <div className="absolute top-0 z-20 flex w-full flex-col text-neutral-200 transition-all">
           <Navbar />
-          <div className="sm:ml-16">
+          <div className="sm:p-32">
             {children}
           </div>
         </div>

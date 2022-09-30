@@ -11,7 +11,7 @@ export default function IndexPage() {
 	}, [count]);
 
 	return (
-		<div className="flex flex-col space-y-32">
+		<div className="flex flex-row space-y-32">
 			<section id="introduction" className="mx-auto flex max-w-full flex-col space-y-8 pt-6 sm:pt-32">
 				<div className="flex flex-col space-y-8">
 					<div className="flex flex-col ">
@@ -54,6 +54,7 @@ export default function IndexPage() {
         <Image
           className="absolute z-10 block h-full rounded object-cover object-center grayscale group-hover:blur-none group-hover:contrast-100 group-hover:grayscale-0"
           src={ImageSelf}
+          height={300}
           placeholder="blur"
         /> 
       </section>
