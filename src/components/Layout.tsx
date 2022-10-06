@@ -9,7 +9,7 @@ export function Layout({ children }: any) {
         <div className="fixed">
           <Background />
         </div>
-        <div className="absolute top-0 z-20 flex w-full flex-col text-neutral-200 transition-all">
+        <div className="absolute top-0 z-20 flex w-full flex-col text-neutral-200 transition-all justify-center max-h-full h-full">
           <Navbar />
           <div className="sm:p-32">
             {children}

@@ -1,15 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Image from 'next/image';
-
-import { GlobalContext } from '../components/AppContext';
 import ImageSelf from '../../public/images/self.png';
 
 const ONE_YEAR_IN_MILLISECONDS = 3.154e10;
 const BIRTH_DATE = new Date(1994, 2, 27);
 
 export default function AboutMe() {
-	const { mode } = useContext(GlobalContext);
-
 	const now = Date.now();
 	const age = Math.floor((now - BIRTH_DATE.getTime()) / ONE_YEAR_IN_MILLISECONDS);
 

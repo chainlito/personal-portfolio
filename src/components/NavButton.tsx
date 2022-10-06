@@ -15,7 +15,7 @@ export function NavButton({ icon, label, href }: NavButtonProps) {
     <Link href={href}>
       <button
         type="button"
-        className="flex my-4 h-12 p-3 text-white bg-gray-800 hover:bg-blue-400 rounded-full transition-colors duration-700 transform font-bold"
+        className="flex my-5 h-12 p-3 text-white bg-gray-800 hover:bg-blue-400 rounded-full transition-colors duration-700 transform font-bold shadow-xl"
         onMouseEnter={() => setEntered(true)}
         onMouseLeave={() => setEntered(false)}
       >
@@ -23,7 +23,7 @@ export function NavButton({ icon, label, href }: NavButtonProps) {
         {entered ? (
             <Typist>
               <span className="px-3">{label}</span>
-            </Typist>
+            </Typist> 
           ) : null}
       </button>
     </Link>
